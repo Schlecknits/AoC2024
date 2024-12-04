@@ -1,13 +1,6 @@
 import re
 
 
-def input_reader(file):
-    for line in file:
-        yield [int(num) for num in line.strip().split()]
-
-    file.close()
-
-
 def multiplicator(pairs):
     result = 0
     for pair in pairs:
@@ -33,7 +26,6 @@ def puzzle_2(re_mul, re_start, re_closed_do_dont, re_last):
     code_to_be_executed += re.match(re_last, text).groups()[0]
     mul_pairs = [[int(num) for num in pair] for pair in re.findall(re_mul, code_to_be_executed)]
     return str(multiplicator(mul_pairs))
-
 
 
 re_multiplication = re.compile(r"(?:mul\()(\d{1,3}),(\d{1,3})\)")
