@@ -78,4 +78,3 @@ def puzzle_2(rules, updates):
 page_rules, all_updates = input_reader("input_5.txt")
 print("Puzzle 1: Sum of correct update middle values:", puzzle_1(page_rules, all_updates))
 print("Puzzle 2: Sum of correct update middle values:", puzzle_2(page_rules, all_updates))
-# print("Sum of correct update middle values:", puzzle_1(page_rules, updates))
